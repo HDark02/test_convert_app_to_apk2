@@ -1,3 +1,6 @@
+# Sample repository at https://github.com/Novfensec/SAMPLE-KIVYMD-APP
+# Tic Tac Toe Game at https://github.com/Novfensec/Tic-Tac-Toe-Android
+
 name: Android Build
 
 on:
@@ -100,7 +103,7 @@ jobs:
 
       # Set up Java 17 required by Gradle
       - name: Setup Java 17 required by Gradle
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -127,6 +130,7 @@ jobs:
       # Upload artifacts
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
+        if: success()
         with:
           name: package
           path: |
