@@ -20,7 +20,7 @@ jobs:
       - name: Build Release APK
         uses: digreatbrian/buildozer-action@v2
         with:
-          python-version: 3.11
+          python-version: 3.10.5
           buildozer-cmd: buildozer -v android release
 
       # Step 3: Sign the APK manually with .jks keystore
